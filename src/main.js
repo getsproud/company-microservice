@@ -12,7 +12,7 @@ const PORT = 50051
 const connectRetry = t => {
   let tries = t
 
-  return connect(`mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@${process.env.MONGO_HOST}/sproud${process.env.MONGO_COLLECTION}?retryWrites=true&w=majority`, {
+  return connect(`mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@${process.env.MONGO_HOST}/${process.env.MONGO_COLLECTION}?retryWrites=true&w=majority`, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false
